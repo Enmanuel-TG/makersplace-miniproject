@@ -5,6 +5,7 @@ import { NAME_TOKEN, IMG_DEFAULT, LEGAL_AGE } from '../utilities/consts.utility.
 import bcrypt from 'bcryptjs';
 import calculateAge from '../utilities/calculate-age.utility.ts';
 import { Role } from '@prisma/client';
+
 export const register = async (req: Request, res: Response) => {
   const { name, email, password, birthday, phoneNumber } = req.body;
   const passwordhash = await bcrypt.hash(password, 10);

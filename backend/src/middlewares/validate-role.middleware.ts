@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import { getTokenId } from '../utilities/get-token-id.utility.ts';
 import { prisma } from '../utilities/prisma.utility.ts';
-import { MAIN_ADMIN, ROLES } from '../utilities/consts.utility.ts';
+import { ROLES } from '../utilities/consts.utility.ts';
 export const getUserAndRole = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const token = req.cookies.token;
@@ -18,11 +18,6 @@ export const getUserAndRole = async (req: Request, res: Response, next: NextFunc
     }
     if (user.role !== ROLES.user && user.role !== ROLES.admin) {
       return res.status(401).json({ message: 'user not authorized' });
-    }
-    if (user.email !== MAIN_ADMIN) {
-      return res.status(401).json({
-        message: 'This is  only available for the main admin',
-      });
     }
     return next();
   } catch (error: any) {

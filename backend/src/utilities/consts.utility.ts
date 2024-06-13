@@ -13,7 +13,9 @@ export const enum ROLES {
   admin = 'admin',
   user = 'user',
 }
-export const MAIN_ADMIN = process.env.MAIN_ADMIN;
+export const GOOGLE_CLIENT_ID = String(process.env.GOOGLE_CLIENT_ID);
+export const GOOGLE_CLIENT_SECRET = String(process.env.GOOGLE_CLIENT_SECRET);
+export const URL_CALLBACK = process.env.URL_CALLBACK;
 
 //-------------------------CONST-------------------------------------
 export const LEGAL_AGE = 18;
