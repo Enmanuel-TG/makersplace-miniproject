@@ -7,6 +7,7 @@
     "filedupload",
     "fontsource",
     "iconify",
+    "resave",
     "tailwindcss"
   ],
   "css.lint.unknownAtRules": "ignore"

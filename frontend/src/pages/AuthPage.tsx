@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
+import LoginComponent from '../components/AuthGoogle';
 const AuthPage = () => {
   const { isAuthenticated } = useAuth();
   const navigate = useNavigate();
@@ -12,6 +13,7 @@ const AuthPage = () => {
 
   return (
     <div className='flex justify-center border-solid border-2 border-black h-screen'>
+      <LoginComponent/>
       <div className='flex flex-col border-solid, border-2 border-black w-2/3'>
         <h1>Auth Page</h1>
       </div>

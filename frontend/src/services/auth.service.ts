@@ -16,3 +16,15 @@ export const updatePhotoProfileRequest = async (photo:  File) => {
     },
   });
 };
+
+export const authWithGoogleRequest = async () => {
+  try {
+    const response = await axios.get('/authGoogle/google');
+    console.log(response.data);
+  } catch (error) {
+    console.error('error to auth with Google:', error);
+    throw error;
+  }
+};
+
+// export const authWithGoogleRequest = async () => fetch('http://localhost:3000/api/authGoogle/google');

@@ -9,6 +9,7 @@ passport.use(
       clientID: GOOGLE_CLIENT_ID,
       clientSecret: GOOGLE_CLIENT_SECRET,
       callbackURL: URL_CALLBACK,
+      scope: ['profile'],
     },
     async (_accessToken: string, _refreshToken: string, profile: Profile, done) => {
       try {

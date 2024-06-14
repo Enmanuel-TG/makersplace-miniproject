@@ -15,6 +15,7 @@ export const enum ROLES {
 }
 export const GOOGLE_CLIENT_ID = String(process.env.GOOGLE_CLIENT_ID);
 export const GOOGLE_CLIENT_SECRET = String(process.env.GOOGLE_CLIENT_SECRET);
+export const SESSION_SECRET = String(process.env.SESSION_SECRET);
 export const URL_CALLBACK = process.env.URL_CALLBACK;
 
 //-------------------------CONST-------------------------------------
